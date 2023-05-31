@@ -1,0 +1,47 @@
+@import "dana.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        @apply duration-[0.2s];
+    }
+
+    body {
+        @apply font-dana;
+    }
+}
+
+@layer components {
+    /* Link border */
+    .link-border {
+        @apply relative flex justify-center items-center;
+    }
+
+    .link-border::after {
+        @apply absolute;
+        content: "";
+        width: 99%;
+        height: 0;
+        transition: 0.2s bor!important;
+        border-bottom: 1px dashed white;
+        bottom: -5px;
+        margin-left: 1px;
+    }
+
+    .link-border:hover::after {
+        border-style: solid;
+    }
+
+    /* Link shadow */
+    .link-shadow:hover {
+        text-shadow: 4px 4px 2px #754996;
+    }
+
+    /* Link  */
+    .link-mmd:hover {
+        text-shadow: -3px -3px 2px rgba(13, 23, 193, 0.8), 3px 3px 2px rgba(117, 73, 150, 0.8);
+    }
+}

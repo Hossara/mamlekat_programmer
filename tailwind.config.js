@@ -9,7 +9,25 @@ module.exports = {
     "./app.vue",
   ],
   theme: {
-    extend: {},
+    fontWeight: {
+      hairline: '10',
+      thin: '100',
+      ultraLight: '200',
+      medium: '500',
+      demiBold: '600',
+      extraBold: '800',
+      black: '900',
+      extraBlack: '930',
+      heavy: '960',
+      fat: '990',
+      bold: '800',
+      normal: 'normal'
+    },
+    extend: {
+      fontFamily: {
+        dana: ["Dana", "sans-serif"]
+      }
+    },
   },
   plugins: [],
 }
